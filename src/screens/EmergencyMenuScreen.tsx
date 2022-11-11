@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, Image } from 'react-native';
 import { SubMenuButton } from '../components/SubMenuButton';
 
 export const EmergencyMenuScreen = () => {
@@ -8,7 +8,7 @@ export const EmergencyMenuScreen = () => {
 
 
         <View style={ styles.header }>
-            
+            <Image source={require('../image/header-logo.png')} />
         </View>
 
         <View style={ styles.title }>
@@ -20,13 +20,13 @@ export const EmergencyMenuScreen = () => {
                 <SubMenuButton 
                     title='Ambulancia'
                     onPress={ () => console.log('Ambulancia')}
-                    icon={require('../image/luz-de-la-calle.png')}
+                    icon={require('../image/ambulancia.png')}
                     size='large'
                 />
                 <SubMenuButton 
                     title='Bomberos'
                     onPress={ () => console.log('Bomberos')}
-                    icon={require('../image/luz-de-la-calle.png')}
+                    icon={require('../image/bombero.png')}
                     size='large'
                 />
             </View>
@@ -34,13 +34,13 @@ export const EmergencyMenuScreen = () => {
                 <SubMenuButton 
                     title='Policía'
                     onPress={ () => console.log('Policía')}
-                    icon={require('../image/luz-de-la-calle.png')}
+                    icon={require('../image/policia.png')}
                     size='large'
                 />
                 <SubMenuButton 
                     title='911'
                     onPress={ () => console.log('911')}
-                    icon={require('../image/luz-de-la-calle.png')}
+                    icon={require('../image/911.png')}
                     size='large'
                 />
             </View>
@@ -48,7 +48,7 @@ export const EmergencyMenuScreen = () => {
                 <SubMenuButton 
                     title='Rescate Animal'
                     onPress={ () => console.log('Rescate Animal')}
-                    icon={require('../image/luz-de-la-calle.png')}
+                    icon={require('../image/rescate-animal.png')}
                     size='large'
                 />
                 <View style={styles.emptyButton}></View>
@@ -66,7 +66,8 @@ const styles = StyleSheet.create({
     },
     header: {
         flex: 2,
-        backgroundColor: 'green',
+        backgroundColor: 'white', //TEST SIZE
+        alignItems: 'center'
     },
     title: {
         flex: 1,
@@ -74,7 +75,7 @@ const styles = StyleSheet.create({
     },
     menu: {
         flex: 12,
-        backgroundColor: 'grey',
+        backgroundColor: 'white', //TEST SIZE
     },
     fila: {
         flexDirection: 'row',
@@ -86,7 +87,7 @@ const styles = StyleSheet.create({
         flex: 1,
         position: 'relative',
 
-        backgroundColor: 'red',
+        backgroundColor: 'white', //TEST SIZE
         width: 200,
         height:200,
     }
